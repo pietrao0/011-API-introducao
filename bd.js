@@ -14,9 +14,6 @@ async function connect() {
     const res = await client.query("SELECT * FROM usuario");
     return res.rows;
   }
-
-  export { selectUsuarios };
-
  
   async function selectUsuario(id) {
     const client = await connect();
