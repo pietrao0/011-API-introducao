@@ -1,6 +1,6 @@
 import pkg from "pg";
 const { Pool } = pkg;
-export { selectUsuarios, selectUsuario, insertUsuario };
+export { selectUsuarios, selectUsuario, insertUsuario, deleteUsuario };
 
 async function connect() {
     const pool = new Pool({
