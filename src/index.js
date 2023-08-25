@@ -1,6 +1,7 @@
 import dotenv from "dotenv";
 import express from "express"; 
-import { selectUsuarios, selectUsuario, insertUsuario, deleteUsuario, updateUsuario } from "./db/bd.js";
+import roteadorUsuario from "./routes/usuario.js";
+
 
 dotenv.config();     
 const app = express();              
@@ -19,3 +20,4 @@ app.listen(port, () => {
   console.log(`Serviço escutando na porta:  ${port}`);
 });
 
+app.use(roteadorUsuario);
